@@ -1,7 +1,7 @@
 # Masterarbeit
  Anwendungs- und Datenintegration mit Apache Camel
 
-Das Java Eclipse-Project nutzt Maven als Build-Management Tool. In der pom.xml Datei sind die verwendeten Packages zu finden. Alle Java Programme sind in src/main/java/integrationMA zu finden. In src/main/python ist das Python Progamm zur Berechnung der Flughöhe zu finden. Die Ordnerstruktur sollte so wie gegeben beibehalten werden.
+Das Java Eclipse-Project nutzt Maven als Build-Management Tool. In der pom.xml Datei sind die verwendeten Packages zu finden. Alle Java Programme sind in src/main/java/integrationMA zu finden. In src/python ist das Python Progamm zur Berechnung der Flughöhe zu finden. Die Ordnerstruktur sollte so wie gegeben beibehalten werden.
 
 **Schritt 1: Dateipfad anpassen und anschließend DatabaseIntegrator.java ausführen, abschließend das Programm terminieren**\
 In setupLocalAsViewDatabase/ liegt eine setup.sql Datei. Diese wird von DatabaseIntegrator.java gelesen, um die lokalen Datenbanken zu erstellen und zu füllen. Das Datenbankmanagementsystem, mit dem sich DatabaseIntegrator.java verbindet, muss auf Port 3306 laufen. Die Datensätze zum Füllen der Datenbanken sind faaAircrafts.txt, openSkyAircrafts.csv und sunAircrafts.csv und sind in Datasets/ zu finden. Zusätzlichen werden die Local-As-View Views für die späteren Anfragen an die Datenbanken erstellt. Bis die Datensätze vollständig eingepfelgt sind, kann etwas Zeit vergehen. Sobald 13-Mal "done" in der Konsole ausgegeben wurde, ist die setup.sql abgeschlossen. **WICHTIG:** Bevor DatabaseIntegrator.java ausgeführt wird, muss der Dateipfad der setup.sql Datei an 3 Stellen angepasst werden: In Zeile 90 muss der Dateipfad der faaAircrafts.txt Datei angegeben werden; In Zeile 96 der Dateipfad der openSkyAircrafts.csv Datei; In Zeile 103 der Dateipfad der sunAircrafts.csv Datei.
@@ -33,4 +33,4 @@ In den ActiveMQ Queues noneTypeCodeResult, flightPosResult und noFlightPosResult
 
 **Bemerkung:**\
 Da es sich bei den Flugfahrzeug- und ModeS-Signale-Ddatensätzen um Datein mit Datengrößen von teilweise mehreren hundert MB bzw. GB handelt, sind in diesem Repository stark reduzierte Datensätze hinterlegt. Bei Bedarf können die vollständigen Datensätze nachgereicht werden.\
-Falls das Ablauf mehrmals getestet werden soll, muss **Schritt 1** übersprungen und direkt mit **Schritt 2** gestartet werden (außgenommen die Datenbank wird gelöscht, dann muss **Schritt 1** ebenfalls durchgeführt werden). Auch zu beachten ist der *WICHTIG* Hinweis in **Schritt 8** bezüglich der Tweet-Duplikate.
+Falls das Ablauf mehrmals getestet werden soll, muss **Schritt 1** übersprungen und direkt mit **Schritt 2** gestartet werden (außgenommen die Datenbank wird gelöscht, dann muss **Schritt 1** ebenfalls durchgeführt werden). Auch zu beachten ist der **WICHTIG** Hinweis in **Schritt 8** bezüglich der Tweet-Duplikate.
