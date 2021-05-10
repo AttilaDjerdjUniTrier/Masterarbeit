@@ -87,20 +87,20 @@ CREATE TABLE sun_db.local_schema_sun (
     PRIMARY KEY (`icao`)
 );
 #
-LOAD DATA INFILE 'C:/Users/faaAircrafts.txt' 
+LOAD DATA INFILE 'C:/Datasets/faaAircrafts.txt' 
 IGNORE INTO TABLE faa_db.local_schema_faa
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 #
-LOAD DATA INFILE 'C:/Users/openSkyAircrafts.csv' 
+LOAD DATA INFILE 'C:/Datasets/openSkyAircrafts.csv' 
 IGNORE INTO TABLE opensky_db.local_schema_opensky
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 #
-LOAD DATA INFILE 'C:/Users/sunAircrafts.csv' 
+LOAD DATA INFILE 'C:/Datasets/sunAircrafts.csv' 
 IGNORE INTO TABLE sun_db.local_schema_sun
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
