@@ -28,6 +28,7 @@ public class ActiveMQTransformer {
 							.to("activemq:flightPos")
 						.otherwise()
 							.to("activemq:noFlightPos")
+					.log("done")
 				;
 				// @formatter:on
 			}
