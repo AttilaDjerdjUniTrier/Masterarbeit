@@ -1,5 +1,5 @@
 # Masterarbeit
- Anwednungs- und Datenintegration mit Apache Camel
+ Anwendungs- und Datenintegration mit Apache Camel
 
 Das Java Eclipse-Project nutzt Maven als Build-Management Tool. In der pom.xml Datei sind die verwendeten Packages zu finden. Alle Java Programme sind in src/main/java/integrationMA zu finden. In src/main/python ist das Python Progamm zur Berechnung der Flughöhe zu finden. Die Ordnerstruktur sollte so wie gegeben beibehalten werden.
 
